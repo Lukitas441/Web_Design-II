@@ -20,18 +20,51 @@ body{
 }
 
 .table_elements{
-    cursor: pointer;
+    /* cursor: pointer; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 4px;
     border: 1px solid;
-    transition: .2s;
     border-radius: 5px;
+    user-select: none;
 }
-.table_elements:hover{
+.table_elements--active{
+    transition: .1s;
+    animation: vuelta .6s;
+    cursor: pointer;
+}
+.table_elements--active:hover{
     background-color: black;
     color: beige;
-    
+    border: none;
     transform: scale(1.2);
+}
+
+.pop-up{
+    animation: salto .25s;
+}
+
+@keyframes salto {
+    1%{
+        transform: scale(.1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes vuelta {
+    0%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
