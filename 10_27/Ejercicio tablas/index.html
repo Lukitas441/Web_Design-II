@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main_container">
+    </div>
+    
+    <div id="button_container--2">
+        <button onclick="abrirFormulario('Agregar')">Agregar persona</button>
+        <button onclick="abrirFormulario('editar')">Editar persona</button>
+      </div>
+
+    <div id="form_bg" class="hidden"></div>
+    <form id="formulario" class="hidden" action="">
+      <h1>Ingresar Persona</h1>
+      <div class="input_container">
+        <label>Nombre</label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="input_container">
+        <label>Apellido</label>
+        <input type="text" name="surname" required />
+      </div>
+      <button type="submit">Cargar</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
